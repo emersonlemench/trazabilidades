@@ -1,0 +1,55 @@
+:root {
+  --brand-green: #2f5d50;
+  --cream: #f4efe9;
+  --brown: #5a3e2b;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: var(--brand-green);
+  color: var(--cream);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo svg {
+  width: 280px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #e6d8c5;
+  font-weight: 400;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.info, .chart {
+  background: white;
+  color: var(--brown);
+  padding: 25px;
+  border-radius: 14px;
+}
+
+h3 {
+  color: var(--brand-green);
+}
+
+canvas {
+  display: block;
+  margin: auto;
+}

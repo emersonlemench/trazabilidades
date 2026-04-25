@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="Favicon R rubio.svg">
+<title>Rubio Coffee Roasters</title>
+
+<style>
+:root{
+  --verde:#2f5d50;
+  --verde-claro:#3e7a6a;
+  --beige:#f4efe9;
+  --texto:#2b2b2b;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--verde);
+}
+
+.hide{ display:none; }
+
+.flag{
+  width:60px;
+  border-radius:4px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+.card{
+  background: var(--beige);
+  border-radius:16px;
+  padding:20px;
+  border:2px solid var(--verde-claro);
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.logo{
+  max-width:200px;
+  width:100%;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.info p{ font-size:14px; margin-bottom:5px; }
+
+h2{
+  margin:15px 0 8px;
+  font-size:16px;
+  color:var(--verde);
+}
+
+.score-big{
+  font-size:26px;
+  font-weight:bold;
+  color:var(--verde);
+}
+
+.scores{
+  background:white;
+  padding:10px;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+.breakdown p{ font-size:13px; }
+
+canvas{
+  width:100%;
+}
+
+@media(max-width:768px){
+  .grid{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="card">
+
+    <div class="header">
+       <div class="logo">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 767.15 197.06">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Degradado_sin_nombre_81);
+        stroke-width: 0px;
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_81" data-name="Degradado sin nombre 81" x1="0" y1="98.53" x2="767.15" y2="98.53" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d1a246"/>
+      <stop offset=".29" stop-color="#f2c866"/>
+      <stop offset=".5" stop-color="#cea556"/>
+      <stop offset=".74" stop-color="#f2c866"/>
+      <stop offset="1" stop-color="#c28f36"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-1" d="M201.37,172.85l-8.37-3.74-34.84-39.75c14.22-4.42,25.34-10.72,33.42-18.88,8.08-8.16,12.09-19.15,12.09-32.99,0-26.69-12.01-46.26-36-58.76C143.63,6.25,109.27,0,64.52,0H25.07C16.43,0,10.18.97,6.33,2.88,2.88,5.01,1.16,7.97,1.16,11.82c0,3.07.86,5.2,2.58,6.33l8.35,4.04c4.04,1.72,6.54,3.37,7.49,4.9.97,1.54,1.45,3.74,1.45,6.62v127.05c0,4.98-2.21,8.35-6.62,10.07l-10.66,4.6c-2.5,1.35-3.74,3.74-3.74,7.22,0,4.04,1.1,6.76,3.31,8.21,2.21,1.43,7.73,2.15,16.56,2.15h51.57c8.27,0,13.73-.67,16.43-2.02,2.29-1.72,3.45-4.5,3.45-8.35,0-3.26-1.43-5.76-4.31-7.49l-9.24-4.34c-5.17-2.29-7.75-5.66-7.75-10.07v-24.48c2.88,1.27,6.71,2.24,11.5,2.85h25.07l16.13,15.86c5.39,5.39,8.94,9.51,10.66,12.39-1.54,1.72-4.42,3.85-8.64,6.33-4.23,2.5-6.33,5.47-6.33,8.94,0,4.04,1.1,6.76,3.31,8.21,2.21,1.43,7.73,2.15,16.56,2.15h51.57c8.46,0,13.76-.73,15.97-2.15,2.21-1.45,3.31-4.17,3.31-8.21,0-4.79-2.58-8.08-7.75-9.8ZM140,93.36c-2.5,5.74-7.43,10.8-14.84,15.11-7.38,4.34-17.13,6.49-29.24,6.49-7.86,0-14.16-1.1-18.85-3.31-4.71-2.21-7.05-5.9-7.05-11.09V34.58c0-4.23,1.56-6.92,4.74-8.05,3.18-1.16,8.89-1.75,17.15-1.75,14.57,0,26.87,3.12,36.86,9.37,9.99,6.25,14.97,18.58,14.97,37.03,0,9.02-1.24,16.43-3.74,22.19ZM364.15,176.46c-6.14-2.99-9.21-6.49-9.21-10.53v-88.43c0-7.49-2.32-11.23-6.92-11.23-4.04,0-12.95,3.18-26.79,9.51-13.81,6.33-20.73,11.42-20.73,15.27,0,3.45,2.53,6.44,7.62,8.94,5.09,2.48,7.65,6.81,7.65,12.95v32.26c0,6.92-2.1,12.68-6.3,17.29-4.2,4.6-9.05,6.92-14.57,6.92-6.87,0-11.5-3.04-13.87-9.08-2.4-6.06-3.58-13.11-3.58-21.19l-2.02-60.48c0-4.42-.57-7.59-1.72-9.51-1.16-1.91-3.07-2.88-5.76-2.88-3.64,0-12.39,3.02-26.2,9.07-13.84,6.06-20.76,11.28-20.76,15.7,0,2.88,2.61,5.44,7.78,7.62,5.2,2.23,7.78,5.82,7.78,10.83l1.72,42.03c0,14.41,2.85,25.61,8.54,33.58,5.68,7.97,14.7,11.96,27.04,11.96,9.45,0,16.91-1.45,22.4-4.34,5.49-2.88,12.01-7.49,19.52-13.81,0,5.57.51,9.32,1.56,11.23,1.05,1.91,3.58,2.88,7.62,2.88h37.54l7.76-1.16c2.07-.75,3.15-2.58,3.15-5.47,0-3.64-3.1-6.97-9.24-9.94ZM500.18,80.14c-14.33-10.58-28.09-15.89-41.36-15.89-1.72,0-4.12.05-7.19.13-3.07.11-6.25.54-9.51,1.32l-14.97,5.47V9.24c-.4-3.47-.97-5.87-1.72-7.22-.78-1.32-2.32-2.02-4.63-2.02-2.88,0-11.61,3.61-26.2,10.82-14.6,7.19-21.89,12.41-21.89,15.7.38,2.69,3.02,5.65,7.92,8.91,4.9,3.29,7.35,7.03,7.35,11.26v139.14l1.16,5.47c.57,1.54,2.29,2.29,5.17,2.29,4.23,0,8.75-1.32,13.54-4.01l16.13-9.24c2.5.21,7.67,2.37,15.56,6.49,7.86,4.12,17.18,6.19,27.92,6.19,16.72,0,29.92-6.06,39.61-18.2,9.69-12.12,14.57-26.25,14.57-42.44,0-24.24-7.16-41.66-21.46-52.24ZM474.39,153.22c-6.52,8.86-14.59,13.3-24.18,13.3-5.01,0-10.1-2.61-15.27-7.81-5.2-5.2-7.78-13.01-7.78-23.43v-26.58c0-4.07,2.48-9.07,7.49-15.05,5.57-5.76,12.87-8.67,21.89-8.67,8.24,0,14.92,4.01,20.01,12.01,5.09,8,7.65,15.65,7.65,22.97,0,13.3-3.26,24.4-9.8,33.26ZM599.4,174.57c-5.66-2.88-8.48-6.62-8.48-11.23v-93.33c0-3.45-.67-5.39-2.02-5.76h-3.77c-3.47,0-12.66,3.5-27.52,10.53-14.86,7-22.3,12.04-22.3,15.11,0,4.42,2.75,7.54,8.21,9.37,5.47,1.83,8.21,4.47,8.21,7.92v56.17c0,4.79-2.75,8.59-8.21,11.39-5.47,2.77-8.21,6.38-8.21,10.8.38,1.91,1.16,3.63,2.32,5.17,1.53,1.56,4.12,2.32,7.78,2.32h49.82c4.6,0,7.89-.81,9.8-2.45,1.91-1.62,2.88-3.31,2.88-5.04,0-4.42-2.83-8.08-8.51-10.96ZM587.47,14.41c-2.29-2.1-5.92-3.15-10.88-3.15-6.87,0-14.22,2.53-22.05,7.62-7.84,5.09-11.74,10.72-11.74,16.86,0,4.42,1.05,7.86,3.15,10.37,2.29,2.13,6.11,3.18,11.47,3.18,8.4,0,16.08-2.58,23.05-7.78,6.95-5.2,10.45-10.37,10.45-15.56,0-5.55-1.16-9.4-3.45-11.53ZM748,84.28c-7.62-8.11-16.78-13.79-27.52-17.02l-.03-.03c-5.79-1.78-12.04-2.8-18.77-3.15-1.64-.11-3.37-.16-5.12-.16-20.95,0-39.18,6.62-54.74,19.93-15.54,13.28-23.32,30.21-23.32,50.81s7.38,34.98,22.19,45.45c14.78,10.5,32.93,15.75,54.45,15.75,24.75,0,42.98-6.25,54.58-18.77,11.63-12.49,17.42-28.3,17.42-47.34,0-16.78-6.38-31.91-19.15-45.48ZM672.23,162.99c-6.76-5.04-11.42-12.9-11.55-21.92-.08-3.47.32-6.89,1.16-10.37,3.9-16.59,19.9-39.77,38.18-39.77,3.2,0,6.49.75,9.8,2.34-18.72,17.21-20.6,27.87-22.38,38.18-1.51,8.78-2.96,17.05-14.76,30.89-.19.22-.32.43-.46.65ZM715.15,149.18c-4.44,8.51-11.9,17.29-21.43,19.33-1.45.24-2.91.35-4.34.35-3.45,0-6.84-.7-10.02-1.91,12.74-15.16,14.51-25.23,16.05-34.12,1.7-9.88,3.18-18.42,20.22-33.96.35-.3.59-.67.81-1.08,15.19,13.73,7.08,34.28-1.29,51.38Z"/>
+</svg>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" class="flag">
+    </div>
+
+    <div class="grid">
+
+      <div class="info">
+        <h2>Ficha</h2>
+        <p><strong>Origen:</strong> <span id="origin"></span></p>
+        <p><strong>Región:</strong> <span id="region"></span></p>
+        <p><strong>Variedad:</strong> <span id="variety"></span></p>
+        <p><strong>Altura:</strong> <span id="altitude"></span></p>
+        <p><strong>Proceso:</strong> <span id="process"></span></p>
+
+        <h2>Notas</h2>
+        <p id="notes"></p>
+
+        <div class="scores">
+          <p>Puntaje</p>
+<div class="score-big" id="score"></div>
+        </div>
+
+        <h2>Analisis Sensorial</h2>
+        <div class="breakdown" id="breakdown"></div>
+      </div>
+
+      <div>
+        <canvas id="radar"></canvas>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+const data = {
+  origin: "Brasil",
+  region: "Minas Gerais",
+  variety: "Bourbon y Mundo Novo",
+  altitude: "1100 - 1250 msnm",
+  process: "Natural",
+  notes: "caramelo, avellana, chocolate con leche",
+  scores:{
+  puntaje: 84.5,
+    attributes:{
+  aroma: 7.25,      // tostado medio, sin mucha fragancia
+  flavour: 7.75,    // dulce, chocolate/avellana
+  aftertaste: 7.5,  // limpio, cacao suave
+  acidity: 7.0,     // baja pero presente (ajustada)
+  body: 7.75,       // buen cuerpo típico Brasil natural
+  balance: 7.25,    // redondo pero simple
+  overall: 7.75,    // agradable, fácil de tomar
+  uniformity: 10,
+  cleanCup: 10,
+  sweetness: 10
+}
+  }
+};
+
+// etiquetas bonitas
+const labelsMap = {
+  aroma: "Fragancia/Aroma",
+  flavour: "Sabor",
+  aftertaste: "Retrogusto",
+  acidity: "Acidez",
+  body: "Cuerpo",
+  balance: "Balance",
+  overall: "General",
+  uniformity: "Uniformidad",
+  cleanCup: "Taza limpia",
+  sweetness: "Dulzor"
+};
+
+// textos
+document.getElementById("origin").textContent = data.origin;
+document.getElementById("region").textContent = data.region;
+document.getElementById("variety").textContent = data.variety;
+document.getElementById("altitude").textContent = data.altitude;
+document.getElementById("process").textContent = data.process;
+document.getElementById("notes").textContent = data.notes;
+document.getElementById("score").textContent = data.scores.puntaje;
+
+// breakdown
+const breakdown = document.getElementById("breakdown");
+Object.entries(data.scores.attributes).forEach(([k,v])=>{
+  const p=document.createElement("p");
+  p.innerHTML=`${labelsMap[k] || k}: ${v}`;
+  breakdown.appendChild(p);
+});
+
+// canvas radar
+const canvas=document.getElementById("radar");
+const ctx=canvas.getContext("2d");
+
+function resize(){
+  canvas.width=canvas.offsetWidth;
+  canvas.height=canvas.offsetWidth;
+}
+
+function draw(){
+  resize();
+
+  const labels=Object.keys(data.scores.attributes);
+  const displayLabels=labels.map(l=>labelsMap[l]||l);
+  const values=Object.values(data.scores.attributes);
+
+  const cx=canvas.width/2;
+  const cy=canvas.height/2;
+  const radius=canvas.width*0.28;
+
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  ctx.font=`${canvas.width*0.03}px Arial`;
+  ctx.fillStyle="#2f5d50";
+  ctx.textAlign="center";
+  ctx.textBaseline="middle";
+
+  // grid
+  for(let s=1;s<=5;s++){
+    ctx.beginPath();
+    labels.forEach((_,i)=>{
+      const a=(Math.PI*2/labels.length)*i;
+      const r=radius*(s/5);
+      const x=cx+r*Math.sin(a);
+      const y=cy-r*Math.cos(a);
+      i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+    });
+    ctx.closePath();
+    ctx.strokeStyle="#ddd";
+    ctx.stroke();
+  }
+
+  // ejes + texto
+  labels.forEach((label,i)=>{
+    const a=(Math.PI*2/labels.length)*i;
+
+    const x=cx+radius*Math.sin(a);
+    const y=cy-radius*Math.cos(a);
+
+    ctx.beginPath();
+    ctx.moveTo(cx,cy);
+    ctx.lineTo(x,y);
+    ctx.strokeStyle="#ccc";
+    ctx.stroke();
+
+    const lx=cx+(radius+20)*Math.sin(a);
+    const ly=cy-(radius+20)*Math.cos(a);
+
+    ctx.fillText(displayLabels[i], lx, ly);
+  });
+
+  // data
+  ctx.beginPath();
+  values.forEach((v,i)=>{
+    const a=(Math.PI*2/labels.length)*i;
+    const r=(v/10)*radius;
+    const x=cx+r*Math.sin(a);
+    const y=cy-r*Math.cos(a);
+    i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+  });
+  ctx.closePath();
+
+  ctx.fillStyle="rgba(47,93,80,0.3)";
+  ctx.fill();
+  ctx.strokeStyle="#2f5d50";
+  ctx.lineWidth=2;
+  ctx.stroke();
+}
+
+window.addEventListener("resize",draw);
+draw();
+</script>
+
+</body>
+</html>
